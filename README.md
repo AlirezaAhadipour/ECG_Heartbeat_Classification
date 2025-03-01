@@ -9,7 +9,7 @@ This project applies **deep learning models (1D-CNN + LSTM)** to classify **ECG 
 - **Task**: Multi-class classification (5 heartbeat types)
 - **Model**: CNN + LSTM architecture
 - **Fine-Tuning**: Transfer learning to adapt to binary classification
-- **Tools Used**: Google Colab, TensorFlow/Keras, NumPy, Pandas, Matplotlib
+- **Tools Used**: Google Colab, TensorFlow/Keras, Scikit-learn, NumPy, Pandas, Matplotlib
 
 ---
 
