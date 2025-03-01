@@ -5,7 +5,7 @@ This project applies **deep learning models (1D-CNN + LSTM)** to classify **ECG 
 ---
 
 ## **Project Overview**
-- **Dataset**: MIT-BIH Arrhythmia Dataset (via Kaggle)(https://www.kaggle.com/datasets/shayanfazeli/heartbeat)
+- **Dataset**: [MIT-BIH Arrhythmia Dataset (via Kaggle)](https://www.kaggle.com/datasets/shayanfazeli/heartbeat)
 - **Task**: Multi-class classification (5 heartbeat types)
 - **Model**: CNN + LSTM architecture
 - **Fine-Tuning**: Transfer learning to adapt to binary classification
