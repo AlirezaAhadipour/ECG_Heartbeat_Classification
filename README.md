@@ -29,6 +29,12 @@ The dataset can be downloaded **directly inside Colab** using the Kaggle API:
 ## **Model Structure & Performance**
 ### **1. Model Structure**
 - The model consists of two **CNN** layers responsible for extracting the features from the ECG signals, followed by an **LSTM** layer to capture the temporal dependencies
-- Class weight is added to the model to give more weight to the minority class and penalize more when misclassified
+- Class weight is added to the model to address class imbalance by giving more weight to the minority class and penalizing more when misclassified
 - Learning rate scheduler is added to the call-back to gradually reduce the learning rate while approaching a plateau
 - Early stopping is also added to terminate the training once the model starts overfitting or there is no improvement in the training 
+
+---
+
+### **2. Model Performance**
+- The model is trained, validated, and tested on the [MIT-BIH Arrhythmia Dataset](https://www.physionet.org/content/mitdb/1.0.0/) to perform multi-class classificationwith with the following performance on the unseen test set:
+![Classification Report](results/performance_metric.png)
