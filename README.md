@@ -38,3 +38,8 @@ The dataset can be downloaded **directly inside Colab** using the Kaggle API:
 ### **2. Model Performance**
 - The model is trained, validated, and tested on the [MIT-BIH Arrhythmia Dataset](https://www.physionet.org/content/mitdb/1.0.0/) to perform multi-class classificationwith with the following performance on the unseen test set:
 ![Classification Report](results/performance_metric.png)
+
+---
+
+### **3. Transfer Learning**
+- I fine-tuned the model above on a holdout dataset ([PTB Diagnostic ECG Database](https://www.physionet.org/content/ptbdb/1.0.0/)), which has two classes, normal and abnormal. To do so, I froze the first CNN and LSTM layers and tune the last Dense layers to perform binary classification
