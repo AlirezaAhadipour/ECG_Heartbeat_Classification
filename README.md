@@ -27,11 +27,13 @@ The dataset can be downloaded **directly inside Colab** using the Kaggle API:
 ---
 
 ## **Model Structure & Performance**
-### **1. Model Structure**
-- The model consists of two **CNN** layers responsible for extracting the features from the ECG signals, followed by an **LSTM** layer to capture the temporal dependencies
-- Class weight is added to the model to address class imbalance by giving more weight to the minority class and penalizing more when misclassified
-- Learning rate scheduler is added to the call-back to gradually reduce the learning rate while approaching a plateau
-- Early stopping is also added to terminate the training once the model starts overfitting or there is no improvement in the training 
+### **1. Model Architecture**
+- Feature Extraction: Two CNN layers extract spatial features from ECG signals.
+- Temporal Dependencies: An LSTM layer captures sequential patterns in ECG signals.
+- Class Imbalance Handling: Class weighting is applied to give more importance to underrepresented classes.
+- Training Optimizations:
+  - Learning Rate Scheduler: Gradually reduces learning rate when training reaches a plateau.
+  - Early Stopping: Stops training when validation performance no longer improves to prevent overfitting.
 
 ---
 
