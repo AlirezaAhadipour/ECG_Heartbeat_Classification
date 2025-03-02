@@ -28,20 +28,23 @@ The dataset can be downloaded **directly inside Colab** using the Kaggle API:
 
 ## **Model Structure & Performance**
 ### **1. Model Architecture**
-- Feature Extraction: Two CNN layers extract spatial features from ECG signals.
-- Temporal Dependencies: An LSTM layer captures sequential patterns in ECG signals.
-- Class Imbalance Handling: Class weighting is applied to give more importance to underrepresented classes.
+- Feature Extraction: Two CNN layers extract spatial features from ECG signals
+- Temporal Dependencies: An LSTM layer captures sequential patterns in ECG signals
+- Class Imbalance Handling: Class weighting is applied to give more importance to underrepresented classes
 - Training Optimizations:
-  - Learning Rate Scheduler: Gradually reduces learning rate when training reaches a plateau.
-  - Early Stopping: Stops training when validation performance no longer improves to prevent overfitting.
+  - Learning Rate Scheduler: Gradually reduces learning rate when training reaches a plateau
+  - Early Stopping: Stops training when validation performance no longer improves to prevent overfitting
 
 ---
 
-### **2. Model Performance**
-- The model is trained, validated, and tested on the [MIT-BIH Arrhythmia Dataset](https://www.physionet.org/content/mitdb/1.0.0/) to perform multi-class classificationwith with the following performance on the unseen test set:
+### **2. Model Performance (Multi-Class Classification)**
+- The model is trained, validated, and tested on the [MIT-BIH Arrhythmia Dataset](https://www.physionet.org/content/mitdb/1.0.0/) achieving the following performance on the unseen test set:
 ![Classification Report](results/performance_metric.png)
 
 ---
 
-### **3. Transfer Learning**
-- I fine-tuned the model above on a holdout dataset ([PTB Diagnostic ECG Database](https://www.physionet.org/content/ptbdb/1.0.0/)), which has two classes, normal and abnormal. To do so, I froze the first CNN and LSTM layers and tune the last Dense layers to perform binary classification
+### **3. Transfer Learning for Binary Classification**
+- The model was fine-tuned on a holdout dataset ([PTB Diagnostic ECG Database](https://www.physionet.org/content/ptbdb/1.0.0/)), which has two classes: normal and abnormal heartbeats
+- Transfer learning approach:
+  - Frozen layers: the CNN and LSTM layers were **frozen** to retain feature extraction knowledge
+  - Fine-tuned layers: the final Dense layers were **retrained** to perform binary classification
