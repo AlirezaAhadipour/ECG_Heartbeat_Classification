@@ -48,3 +48,4 @@ The dataset can be downloaded **directly inside Colab** using the Kaggle API:
 - Transfer learning approach:
   - Frozen layers: the CNN and LSTM layers were **frozen** to retain feature extraction knowledge
   - Fine-tuned layers: the final Dense layers were **retrained** to perform binary classification
+    
