@@ -21,6 +21,5 @@ This project applies **deep learning models (1D-CNN + LSTM)** to classify **ECG 
 ---
 
 ### **2. Download the Dataset from Kaggle**
-#### **Load Data from Kaggle**
 The dataset can be downloaded **directly inside Colab** using the Kaggle API:
 - When prompted, upload your `kaggle.json` file to authenticate and download the dataset
